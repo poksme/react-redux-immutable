@@ -1,5 +1,0 @@
-# Source files will not be published, only transpiled files
-src
-example
-.babelrc
-.gitignore

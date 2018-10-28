@@ -1,0 +1,5 @@
+node_modules
+# Waiting for mainDir NPM feature moved transpiled files to root directory
+/connect.js
+/index.js
+/to-js.js

@@ -60,5 +60,10 @@ typings/
 # next.js build output
 .next
 
-# Npm build
-dist
+# OS X specific
+.DS_Store
+
+# Waiting for mainDir NPM feature moved transpiled files to root directory
+/package/connect.js
+/package/index.js
+/package/to-js.js
