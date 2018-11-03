@@ -1,6 +1,6 @@
 {
   "name": "shopping-cart",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": true,
   "devDependencies": {
     "enzyme": "^3.6.0",
@@ -17,7 +17,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
-    "react-redux-immutable": "^1.1.1",
+    "react-redux-immutable": "^1.2.0",
     "redux": "^3.5.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0"
