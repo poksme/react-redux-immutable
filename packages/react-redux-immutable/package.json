@@ -1,15 +1,19 @@
 {
   "name": "react-redux-immutable",
-  "version": "1.1.0",
+  "version": "1.1.1",
+  "private": false,
   "description": "React Redux bindings that are Immutable literate",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "prepublishOnly": "npm run build",
-    "build": "babel src -d .",
-    "build:example": "babel src -d ../example/shopping-cart/src/lib/react-redux-immutable",
+    "prepublish": "babel src -d .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "/connect.js",
+    "/index.js",
+    "/to-js.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poksme/react-redux-immutable.git"
@@ -29,8 +33,8 @@
   "homepage": "https://github.com/poksme/react-redux-immutable#readme",
   "peerDependencies": {
     "immutable": "^3.0.0",
-    "react-redux": "^5.0.0",
     "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
+    "react-redux": "^5.0.0",
     "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0"
   },
   "devDependencies": {
@@ -43,6 +47,10 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "immutable": "^3.8.2",
+    "react": "^16.6.0",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1"
   }
 }

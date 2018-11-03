@@ -1,15 +1,15 @@
 {
   "name": "shopping-cart",
-  "version": "0.0.1",
+  "version": "1.1.1",
   "private": true,
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
-    "react-scripts": "^2.0.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "react-scripts": "^2.0.2"
   },
   "dependencies": {
     "immutable": "^3.8.2",
@@ -17,7 +17,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
-    "react-redux-immutable": "^1.1.0",
+    "react-redux-immutable": "^1.1.1",
     "redux": "^3.5.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0"
