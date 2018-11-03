@@ -2,6 +2,9 @@
 
 React Redux Immutable bindings with 0 dependency
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT) [![npm: react-redux-immutable](https://img.shields.io/npm/v/react-redux-immutable.svg?style=flat)](https://www.npmjs.com/package/react-redux-immutable) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style-flat)](https://lernajs.io/)
+
+
 ## Installation
 
 React Redux Immutable relies on peer dependencies, it requires **React 0.14 or later**, **Redux 2 or later**, **React Redux 5 or later** and **Immutable 3** already installed.
@@ -46,6 +49,21 @@ export default connect(
 )(myReactComponent); // This component will receive JavaScript props
 ```
 
+or with optional filter list
+
+```javascript
+import { connect } from 'react-redux-immutable';
+
+//...
+
+export default connect(
+  mapStateToProps, // Returned Immutable props will be transformed
+  {
+    /* actions */
+  },
+)(myReactComponent, ['myPropKey']); // This component will receive JavaScript props
+```
+
 ### `toJS`
 
 If you want more control over your connect logic, you can use `toJS` function, as seen on [Redux documentation](https://redux.js.org/recipes/usingimmutablejs#what-are-some-opinionated-best-practices-for-using-immutable-js-with-redux)
@@ -79,6 +97,22 @@ export default connect(
     /* actions */
   },
 )(toJS(myReactComponent)); // The wrapped component will receive JavaScript props
+```
+
+and with optional filter list
+
+```javascript
+import { connect } from 'react-redux';
+import { toJS } from 'react-redux-immutable';
+
+//...
+
+export default connect(
+  mapStateToProps, // Returned Immutable props will be transformed
+  {
+    /* actions */
+  },
+)(toJS(myReactComponent, ['myPropKey'])); // The wrapped component will receive JavaScript props
 ```
 
 ### Tree-shaking

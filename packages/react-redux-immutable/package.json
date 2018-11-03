@@ -7,13 +7,16 @@
   "scripts": {
     "lint": "eslint src",
     "prepublish": "babel src -d .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "files": [
     "/connect.js",
     "/index.js",
     "/to-js.js"
   ],
+  "jest": {
+    "coverageDirectory": "./src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poksme/react-redux-immutable.git"
@@ -46,9 +49,11 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "immutable": "^3.8.2",
+    "jest": "^23.6.0",
     "react": "^16.6.0",
     "react-redux": "^5.1.0",
     "redux": "^4.0.1"

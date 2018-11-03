@@ -3,3 +3,4 @@
 .eslintrc.js
 prettier.config.js
 src/
+spec/
