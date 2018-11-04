@@ -67,3 +67,5 @@ typings/
 /packages/react-redux-immutable/connect.js
 /packages/react-redux-immutable/index.js
 /packages/react-redux-immutable/to-js.js
+/packages/react-redux-immutable/README.md
+/packages/react-redux-immutable/LICENSE

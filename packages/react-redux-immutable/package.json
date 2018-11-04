@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "prepublish": "babel src -d .",
+    "build": "babel src -d .",
+    "copy:readme": "cp ../../README.md .",
+    "copy:license": "cp ../../LICENSE .",
+    "prepublish": "npm run build && npm run copy:readme && npm run copy:license",
     "test": "jest"
   },
   "files": [
