@@ -1,6 +1,6 @@
 {
   "name": "react-redux-immutable",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": false,
   "description": "React Redux bindings that are Immutable literate",
   "main": "index.js",
