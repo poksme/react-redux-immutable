@@ -38,7 +38,22 @@ describe('mapComponentProps', () => {
     });
   });
 
-  test('ignores props from ignore list', () => {
+  test('ignores props from blacklist', () => {
+    expect(
+      mapComponentProps(
+        {
+          name: 'Thibault',
+          pets: List(['La Stoune', 'Bibou']),
+        },
+        ['pets'],
+        true,
+      ),
+    ).toEqual({
+      name: 'Thibault',
+      pets: List(['La Stoune', 'Bibou']),
+    });
+  });
+  test('defaults to blacklist', () => {
     expect(
       mapComponentProps(
         {
@@ -50,6 +65,23 @@ describe('mapComponentProps', () => {
     ).toEqual({
       name: 'Thibault',
       pets: List(['La Stoune', 'Bibou']),
+    });
+  });
+  test('converts props from whitelist', () => {
+    expect(
+      mapComponentProps(
+        {
+          name: 'Thibault',
+          pets: List(['La Stoune', 'Bibou']),
+          family: List(['Toto', 'Tata']),
+        },
+        ['pets'],
+        false,
+      ),
+    ).toEqual({
+      name: 'Thibault',
+      pets: ['La Stoune', 'Bibou'],
+      family: List(['Toto', 'Tata']),
     });
   });
 });

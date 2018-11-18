@@ -4,6 +4,7 @@ React Redux Immutable bindings with 0 dependency
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT) [![npm: react-redux-immutable](https://img.shields.io/npm/v/react-redux-immutable.svg?style=flat)](https://www.npmjs.com/package/react-redux-immutable) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style-flat)](https://lernajs.io/)
 
+> Are you using Immutable.js with Redux selectors (reselect or re-reselect)? Take a look at [functional-immutable](https://github.com/poksme/functional-immutable) for a null-safe & consistent point-free implementation of your selectors.
 
 ## Installation
 
@@ -15,9 +16,9 @@ npm install --save react-redux-immutable
 
 ## Usage
 
-### `connect`
+### `connect(...vargs)(WrappedComponent, filterList = [], isBlacklist = true)`
 
-React Redux Immutable provides a drop-in replacement of React Redux `connect` function.
+Thanks to default parameters, React Redux Immutable provides a drop-in replacement of React Redux `connect` function.
 
 Replace
 
@@ -64,7 +65,7 @@ export default connect(
 )(myReactComponent, ['myPropKey']); // This component will receive JavaScript props
 ```
 
-### `toJS`
+### `toJS(WrappedComponent, filterList = [], isBlacklist = true)`
 
 If you want more control over your connect logic, you can use `toJS` function, as seen on [Redux documentation](https://redux.js.org/recipes/usingimmutablejs#what-are-some-opinionated-best-practices-for-using-immutable-js-with-redux)
 
